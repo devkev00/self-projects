@@ -1,2 +1,1 @@
-# self-projects
-# for test
+# 세션 실습 공간 😎
