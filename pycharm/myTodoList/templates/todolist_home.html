@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyToDoList</title>
+</head>
+<body>
+  <h2>MyTodolist</h2>
+  <a href="/create">할 일 생성하기</a>
+      {% for todo in todos %}
+          <article>
+              <br>
+              {{ todo.title }}
+              <br>
+              {{ todo.content }}
+              <br>
+              {{ todo.date }}
+              <p>했어요? 안 했어요?: {{ todo.completed }}</p>
+              <a href="{% url 'todolist:todolist_update' todo.pk %}">수정하기</a>
+              <a href="{% url 'todolist:todolist_delete' todo.pk %}">삭제하기</a>
+          </article>
+      {% endfor %}
+</body>
+</html>

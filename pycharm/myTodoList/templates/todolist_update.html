@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyToDoList - 수정</title>
+</head>
+<body>
+<h1>할 일 수정</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" id="title" name="title" value="{{ todo.title }}" required><br>
+    <textarea id="content" name="content" rows="4" cols="50" required>{{ todo.content }}</textarea><br>
+    <input type="checkbox" name="completed" {% if todo.completed %}checked{% endif %}>
+    <button type="submit">수정하기</button>
+</form>
+
+</body>
+</html>

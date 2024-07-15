@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyToDoList</title>
+</head>
+<body>
+<h1>create</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="제목을 입력하세요" id="title" name="title" required><br>
+    <textarea id="content" placeholder="내용을 입력하세요" name="content" rows="4" cols="50" required></textarea><br>
+    <button type="submit">등록하기</button>
+
+</form>
+
+</body>
+</html>
